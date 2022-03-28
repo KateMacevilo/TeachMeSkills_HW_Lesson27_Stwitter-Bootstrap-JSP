@@ -1,0 +1,8 @@
+
+c
+java:S1128"GRemove this unused import 'org.omg.PortableInterceptor.USER_EXCEPTION'.(™²…&8ץ™¢וü/
+r
+java:S1989-"PHandle the following exception that could be thrown by "getWriter": IOException.(אֿ¥¸üÿÿÿÿ8ץ™¢וü/
+r
+java:S1989+"PHandle the following exception that could be thrown by "getWriter": IOException.(ֳבזÿשÿÿÿÿ8ץ™¢וü/
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ך±ֹ8ץ™¢וü/

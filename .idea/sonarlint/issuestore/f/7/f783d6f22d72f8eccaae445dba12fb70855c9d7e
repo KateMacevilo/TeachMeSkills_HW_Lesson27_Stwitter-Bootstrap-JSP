@@ -1,0 +1,34 @@
+
+m
+java:S1989J"PHandle the following exception that could be thrown by "getWriter": IOException.(Ú¬8ïñ£åü/
+{
+java:S1989G"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(ÏàÕÉÿÿÿÿÿ8ïñ£åü/
+m
+java:S19895"PHandle the following exception that could be thrown by "getWriter": IOException.(ı¤Şİ8ïñ£åü/
+v
+java:S1989+"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(ö›„İ8ïñ£åü/
+ˆ
+java:S2178F"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(ŞúÊşÿÿÿÿ8ïñ£åü/
+{
+java:S2293L"YReplace the type specification in this constructor call with the diamond operator ("<>").(ì¯–úÿÿÿÿ8ïñ£åü/
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ê±É8ïñ£åü/
+v
+java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(ö›„İ8ïñ£åü/
+g
+java:S1192""JDefine a constant instead of duplicating this literal "No access" 3 times.(ı¤Şİ8ïñ£åü/
+m
+java:S1989""PHandle the following exception that could be thrown by "getWriter": IOException.(ı¤Şİ8ïñ£åü/
+^
+java:S1854L"<Remove this useless assignment to local variable "userList".(ì¯–úÿÿÿÿ8ïñ£åü/
+m
+java:S1989B"PHandle the following exception that could be thrown by "getWriter": IOException.(ı¤Şİ8ïñ£åü/
+Y
+java:S1854H"<Remove this useless assignment to local variable "userInfo".(©§ÖÚ8ïñ£åü/
+m
+java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(™Õ–ê8ïñ£åü/
+r
+java:S1989Q"PHandle the following exception that could be thrown by "getWriter": IOException.(ÀÈéèøÿÿÿÿ8ïñ£åü/
+r
+java:S1989T"PHandle the following exception that could be thrown by "getWriter": IOException.(÷Èÿÿÿÿÿ8ïñ£åü/
+r
+java:S19891"PHandle the following exception that could be thrown by "getWriter": IOException.(Óèšºüÿÿÿÿ8ïñ£åü/

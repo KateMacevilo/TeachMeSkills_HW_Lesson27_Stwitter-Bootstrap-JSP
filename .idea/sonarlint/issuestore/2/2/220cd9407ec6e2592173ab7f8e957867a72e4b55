@@ -1,0 +1,8 @@
+
+ƒ
+java:S1488$"aImmediately return this expression instead of assigning it to the temporary variable "isDeleted".(»——¾øÿÿÿÿ8áá–åü/
+‚
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "isEdited".(…ÂÏøÿÿÿÿ8áá–åü/
+^
+java:S1854)"<Remove this useless assignment to local variable "userList".(Ú«§ºÿÿÿÿÿ8áá–åü/
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(üÉ°êşÿÿÿÿ8áá–åü/
