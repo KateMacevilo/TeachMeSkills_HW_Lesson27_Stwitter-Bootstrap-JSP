@@ -14,8 +14,8 @@
 <body>
 
 <div class="d-grid gap-2 col-6 mx-auto m-3">
-    <button class="btn btn-primary" type="button" onClick='location.href="/registration.jsp"'>Registration</button>
-    <button class="btn btn-secondary" type="button" onClick='location.href="/authorization.jsp"'>Authorization</button>
+    <button class="btn btn-primary" type="button" onClick='location.href="/registration"'>Registration</button>
+    <button class="btn btn-secondary" type="button" onClick='location.href="/authorization"'>Authorization</button>
 </div>
 
 </body>

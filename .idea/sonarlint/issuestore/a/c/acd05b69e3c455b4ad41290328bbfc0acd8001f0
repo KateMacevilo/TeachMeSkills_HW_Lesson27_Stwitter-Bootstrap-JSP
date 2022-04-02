@@ -1,7 +1,7 @@
 
-d	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶şÎŞ
-m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¢¡•
-m	java:S116"URename this field "comment_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù¶ª¡øÿÿÿÿ
-f	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º˜Ãûÿÿÿÿ
-a	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶şÎŞ
-d	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨—’ğ
+o	java:S116"URename this field "comment_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù¶ª¡øÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶şÎŞ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶şÎŞ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¢¡•
+f	java:S117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨—’ğ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(º˜Ãûÿÿÿÿ

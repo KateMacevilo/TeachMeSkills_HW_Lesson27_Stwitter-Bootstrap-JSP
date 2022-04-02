@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Катя
@@ -28,6 +29,20 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
+
+            <div style="margin-top: 15px">
+                <c:if test="${isAdded == true}">
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">Well done!</h4>
+                    </div>
+                </c:if>
+                <c:if test="${isAdded == false}">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <h4 class="alert-heading">Error</h4>
+                    </div>
+                </c:if>
+            </div>
+
         </form>
     </div>
 </div>

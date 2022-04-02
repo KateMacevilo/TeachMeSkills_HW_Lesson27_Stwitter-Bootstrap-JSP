@@ -47,3 +47,14 @@ P
  src/main/webapp/registration.jsp,d\d\dd51f7041d5a8d7bb17c79a85099a350e198ae09
 ‘
 asrc/main/java/com/teschMeSkills/lesson27/twitterServlet/web/servlet/user/RegistrationServlet.java,0\d\0d6cdbd21181ce63cc5fe75b4fba424dc4feb80c
+Q
+!src/main/webapp/authorization.jsp,9\e\9e581c0d9b27569cb6169008176972c0e96fc21d
+L
+src/main/webapp/notFound.jsp,7\c\7c1e77e1860ebe1216f322960f2637dd100597e2
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+>
+SwitterJSP.iml,9\5\95b2834a9f8f733c15b2492a4c4b450836dd922f
+O
+src/main/webapp/myPostsPage.jsp,5\f\5fef0a7cf1fc9623b72aa8f5d285bc253422450a

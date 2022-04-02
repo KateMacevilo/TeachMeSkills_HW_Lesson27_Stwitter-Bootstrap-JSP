@@ -18,6 +18,12 @@ public class RegistrationServlet extends HttpServlet {
 
     private final UserService userService = new UserService();
 
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        getServletContext().getRequestDispatcher("/registration.jsp").forward(req, resp);
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -33,19 +39,19 @@ public class RegistrationServlet extends HttpServlet {
         user.setLogin(login);
         user.setPassword(password);
 
-        if (role.contains("admin")){
+        if (role.contains("admin")) {
             user.setRole(Role.ADMIN);
         } else {
             user.setRole(Role.USER);
         }
 
         boolean isAdded = userService.addUser(user);
+        req.setAttribute("isAdded", isAdded);
         if (isAdded) {
-            resp.getWriter().println("Ok");
+            getServletContext().getRequestDispatcher("/registration.jsp").forward(req, resp);
         } else {
-            resp.getWriter().println("Error");
+            getServletContext().getRequestDispatcher("/registration.jsp").forward(req, resp);
             resp.setStatus(400);
-
         }
 
     }

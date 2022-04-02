@@ -17,6 +17,11 @@ public class AuthorizationServlet extends HttpServlet {
     private final UserService userService = new UserService();
 
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        getServletContext().getRequestDispatcher("/authorization.jsp").forward(req, resp);
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String login = req.getParameter("login");
@@ -25,12 +30,13 @@ public class AuthorizationServlet extends HttpServlet {
         User user = userService.findByLogin(login);
 
         if (user.getLogin() != null) {
-
-            if (user.getPassword().equals(password)) {
+            boolean result = user.getPassword().equals(password);
+            if (result) {
                 req.getSession().setAttribute("user", user);
-                resp.getWriter().println("Success");
+                req.setAttribute("isAdded", result);
+                getServletContext().getRequestDispatcher("/authorization.jsp").forward(req, resp);
             } else {
-                resp.getWriter().println("Wrong Password!");
+                getServletContext().getRequestDispatcher("/authorization.jsp").forward(req, resp);
                 resp.setStatus(401);
             }
         } else {

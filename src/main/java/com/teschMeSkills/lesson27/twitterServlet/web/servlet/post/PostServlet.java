@@ -53,6 +53,7 @@ public class PostServlet extends HttpServlet {
 
         } else {
             req.setAttribute("allPosts", allPosts);
+            getServletContext().getRequestDispatcher("/myPostsPage.jsp").forward(req, resp);
 //            for (Post post : allPosts) {
 //                resp.getWriter().println(post.toString());
 //            }
