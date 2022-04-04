@@ -1,10 +1,14 @@
 
-r
-java:S1989,"PHandle the following exception that could be thrown by "getWriter": IOException.(Ãáæÿùÿÿÿÿ8õ™¢åü/
-r
-java:S1989."PHandle the following exception that could be thrown by "getWriter": IOException.(àÏ¥¸üÿÿÿÿ8ÓŠı/
+~
+java:S19893"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Ğœ¶8ø„ÿÖş/
 v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ê±É8õ™¢åü/
-Y
-java:S1128"<Remove this unused import 'javax.servlet.RequestDispatcher'.(Ëöò¼8ÓŠı/
 c
 java:S1128"GRemove this unused import 'org.omg.PortableInterceptor.USER_EXCEPTION'.(™²…&8õ™¢åü/
+o
+java:S1192"RDefine a constant instead of duplicating this literal "/registration.jsp" 3 times.(Ğœ¶8ø„ÿÖş/
+~
+java:S19895"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Ğœ¶8¶õüÕş/
+Y
+java:S1128"<Remove this unused import 'javax.servlet.RequestDispatcher'.(Ëöò¼8ËÊ¬Öş/
+~
+java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Ğœ¶8š—Óş/

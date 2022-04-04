@@ -28,7 +28,7 @@ public class PostServlet extends HttpServlet {
         boolean isAdded = postService.addPost(post);
 
         if (isAdded) {
-            resp.getWriter().println("Post added " + post.toString());
+            getServletContext().getRequestDispatcher("/myPostsPage.jsp").forward(req, resp);
         } else {
             getServletContext().getRequestDispatcher("/notFound.jsp").forward(req, resp);
         }

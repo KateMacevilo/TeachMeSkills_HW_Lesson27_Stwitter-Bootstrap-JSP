@@ -48,7 +48,8 @@ public class RegistrationServlet extends HttpServlet {
         boolean isAdded = userService.addUser(user);
         req.setAttribute("isAdded", isAdded);
         if (isAdded) {
-            getServletContext().getRequestDispatcher("/registration.jsp").forward(req, resp);
+            resp.sendRedirect("/authorization.jsp");
+           // getServletContext().getRequestDispatcher("/registration.jsp").forward(req, resp);
         } else {
             getServletContext().getRequestDispatcher("/registration.jsp").forward(req, resp);
             resp.setStatus(400);

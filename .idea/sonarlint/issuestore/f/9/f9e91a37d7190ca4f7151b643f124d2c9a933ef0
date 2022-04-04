@@ -1,12 +1,16 @@
 
-m
-java:S1989!"PHandle the following exception that could be thrown by "getWriter": IOException.(ÕóŸÌ8è®åü/
-\
-java:S2441":Make "User" serializable or don't store it in the session.(ƒÖ‹¬şÿÿÿÿ8ò•£ı/
-r
-java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(–•ÿşÿÿÿÿ8è®åü/
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ê±É8è®åü/
+}
+java:S1989%"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(˜ÑM8ñ­¹×ş/
 ~
-java:S1989%"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ûĞ¦“8Íæ©ı/
+java:S1989+"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ûĞ¦“8Íæ©ı/
+o
+java:S1192"SDefine a constant instead of duplicating this literal "/authorization.jsp" 3 times.(˜ÑM8Ò¨º×ş/
+}
+java:S1989'"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(˜ÑM8Ò¨º×ş/
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ê±É8è®åü/
 Y
 java:S1128"<Remove this unused import 'javax.servlet.RequestDispatcher'.(Ëöò¼8Íæ©ı/
+}
+java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(˜ÑM8Äå›Óş/
+\
+java:S2441#":Make "User" serializable or don't store it in the session.(ƒÖ‹¬şÿÿÿÿ8ò•£ı/
