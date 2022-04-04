@@ -48,15 +48,14 @@ public class PostServlet extends HttpServlet {
 
 
         if (allPosts.isEmpty()) {
-            resp.getWriter().println("No posts yet");
-            resp.setStatus(204);
+            req.setAttribute("noPosts", true);
+            getServletContext().getRequestDispatcher("/myPostsPage.jsp").forward(req, resp);
 
         } else {
+            req.setAttribute("noPosts", false);
             req.setAttribute("allPosts", allPosts);
             getServletContext().getRequestDispatcher("/myPostsPage.jsp").forward(req, resp);
-//            for (Post post : allPosts) {
-//                resp.getWriter().println(post.toString());
-//            }
+
         }
 
     }

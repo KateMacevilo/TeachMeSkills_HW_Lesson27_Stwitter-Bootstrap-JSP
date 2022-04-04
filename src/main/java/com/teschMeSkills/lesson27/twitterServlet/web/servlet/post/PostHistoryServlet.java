@@ -24,11 +24,12 @@ public class PostHistoryServlet extends HttpServlet {
         allPostsHistory = postService.getAllPosts();
 
         if (!allPostsHistory.isEmpty()) {
-            for (Post post : allPostsHistory) {
-                resp.getWriter().println(post.toString());
-            }
+            req.setAttribute("noPosts", false);
+            req.setAttribute("allPosts", allPostsHistory);
+            getServletContext().getRequestDispatcher("/myPostsPage.jsp").forward(req, resp);
         } else {
-            resp.getWriter().println("No history yet =(");
+            req.setAttribute("noPosts", true);
+            getServletContext().getRequestDispatcher("/myPostsPage.jsp").forward(req, resp);
         }
     }
 }
