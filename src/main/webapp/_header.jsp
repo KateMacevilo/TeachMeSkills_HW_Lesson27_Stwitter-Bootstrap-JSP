@@ -1,4 +1,4 @@
-<%@ page import="com.teschMeSkills.lesson27.twitterServlet.entity.User" %>
+<%@ page import="com.teachMeSkills.lesson27.twitterServlet.entity.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.

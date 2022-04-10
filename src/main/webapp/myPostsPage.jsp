@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page import="com.teschMeSkills.lesson27.twitterServlet.entity.Post" %>
+<%@ page import="com.teachMeSkills.lesson27.twitterServlet.entity.Post" %>
 <%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: Катя
