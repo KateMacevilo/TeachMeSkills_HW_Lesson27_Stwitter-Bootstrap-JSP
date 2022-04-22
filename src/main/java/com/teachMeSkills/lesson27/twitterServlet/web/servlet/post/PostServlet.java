@@ -44,7 +44,7 @@ public class PostServlet extends HttpServlet {
 
         User user = (User) req.getSession().getAttribute("user");
 
-        List<Post> allPosts = new ArrayList<>();
+        List<Post> allPosts;
         if (user.getRole() == Role.ADMIN) {
             allPosts = postService.getAllPosts();
             logger.info("Get all posts as Admin, name - {}", user.getLogin());
@@ -52,7 +52,6 @@ public class PostServlet extends HttpServlet {
             logger.info("Get all posts as User, name - {}", user.getLogin());
             allPosts = postService.getAllPostsByLogin(user.getLogin());
         }
-
 
         if (allPosts.isEmpty()) {
             req.setAttribute("noPosts", true);
@@ -65,54 +64,4 @@ public class PostServlet extends HttpServlet {
 
     }
 
-    @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        int idPost = Integer.parseInt(req.getParameter("idPost"));
-        User user = (User) req.getSession().getAttribute("user");
-        boolean isDeleted = false;
-
-        if (user.getRole().equals(Role.ADMIN)) {
-            String loginUser = postService.getLoginByIdPost(idPost);
-            logger.info("Delete  post as Admin, name - {}, idPost {}", user.getLogin(), idPost);
-            isDeleted = postService.deletePost(idPost, loginUser);
-        } else {
-            logger.info("Delete  post as User, name - {}, idPost {}", user.getLogin(), idPost);
-            isDeleted = postService.deletePost(idPost, user.getLogin());
-        }
-
-        if (isDeleted) {
-            resp.getWriter().println("Post was deleted");
-        } else {
-            resp.getWriter().println("Error, no access");
-            resp.setStatus(400);
-        }
-
-    }
-
-    @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        int idPost = Integer.parseInt(req.getParameter("idPost"));
-        String text = req.getParameter("text");
-        User user = (User) req.getSession().getAttribute("user");
-        boolean isEdit = false;
-
-        if (user.getRole().equals(Role.ADMIN)) {
-            logger.info("Edit  post as Admin, name - {}, idPost {}", user.getLogin(), idPost);
-            String loginUser = postService.getLoginByIdPost(idPost);
-            isEdit = postService.editPost(idPost, text, loginUser);
-        } else {
-            logger.info("Edit  post as User, name - {}, idPost {}", user.getLogin(), idPost);
-            isEdit = postService.editPost(idPost, text, user.getLogin());
-        }
-
-        if (isEdit) {
-            resp.getWriter().println("Post was edited");
-        } else {
-            resp.getWriter().println("Error, no access");
-            resp.setStatus(400);
-        }
-
-    }
 }

@@ -22,30 +22,17 @@
             <form action="/registration" method="post">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" name="name" id="name" aria-describedby="namelHelp">
+                    <input type="text" class="form-control" name="name" id="name" value="Kate" aria-describedby="namelHelp">
                 </div>
                 <div class="mb-3">
                     <label for="login" class="form-label">Login</label>
-                    <input type="text" class="form-control" name="login" id="login" aria-describedby="loginlHelp">
+                    <input type="text" class="form-control" name="login" id="login" value="KateM" aria-describedby="loginHelp">
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password" id="password">
+                    <input type="password" class="form-control" name="password" id="password" value="t">
                 </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radioRole" value="user" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        user
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radioRole" value="admin" id="flexRadioDefault2"
-                           checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        admin
-                    </label>
-                </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
 

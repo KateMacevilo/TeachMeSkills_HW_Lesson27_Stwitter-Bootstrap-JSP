@@ -1,0 +1,8 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨Ó¯Ñ
+|
+java:S2178'"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(Ú»∂–
+|
+java:S21784"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(Ú»∂–
+|
+java:S2178z"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(–ê⁄é

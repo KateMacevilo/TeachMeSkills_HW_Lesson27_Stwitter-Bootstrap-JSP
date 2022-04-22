@@ -1,0 +1,28 @@
+
+a
+java:S1192&"FDefine a constant instead of duplicating this literal "Error" 3 times.(àÏ¥¸üÿÿÿÿ
+c
+java:S1192$"HDefine a constant instead of duplicating this literal "Success" 3 times.(–ž•ÿþÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¢Îòîùÿÿÿÿ
+o
+java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(×ïÉ„
+k
+java:S1989$"PHandle the following exception that could be thrown by "getWriter": IOException.(–ž•ÿþÿÿÿÿ
+k
+java:S1989&"PHandle the following exception that could be thrown by "getWriter": IOException.(àÏ¥¸üÿÿÿÿ
+V
+java:S18542";Remove this useless assignment to local variable "comment".(áÕ¶Ùúÿÿÿÿ
+o
+java:S1989-"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(Œâ„–
+o
+java:S1989."YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(×ïÉ„
+k
+java:S1989="PHandle the following exception that could be thrown by "getWriter": IOException.(–ž•ÿþÿÿÿÿ
+k
+java:S1989?"PHandle the following exception that could be thrown by "getWriter": IOException.(àÏ¥¸üÿÿÿÿ
+o
+java:S1989G"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(Œâ„–
+k
+java:S1989T"PHandle the following exception that could be thrown by "getWriter": IOException.(–ž•ÿþÿÿÿÿ
+k
+java:S1989V"PHandle the following exception that could be thrown by "getWriter": IOException.(àÏ¥¸üÿÿÿÿ

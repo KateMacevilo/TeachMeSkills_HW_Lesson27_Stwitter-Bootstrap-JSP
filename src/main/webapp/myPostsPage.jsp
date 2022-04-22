@@ -48,49 +48,102 @@
             </div>
 
 
-            <form action="/post" method="get" class="border border-light">
+            <%--            <form action="/post" method="get" class="border border-light">--%>
 
-                <c:set var="result" value="${requestScope.noPosts}"/>
+            <c:set var="result" value="${requestScope.noPosts}"/>
 
-                <c:if test="${result}">
-                    <p>No posts yet ;(</p>
-                </c:if>
+            <c:if test="${result}">
+                <p>No posts yet ;(</p>
+            </c:if>
 
-                <c:if test="${!result}">
-                    <div class="form-floating my-3 px-3">
-                        <c:forEach var="post" items="${allPosts}">
-                            <ul class="list-group list-group-flush" style="margin-top: 15px">
-                                <li class="list-group-item">
-                                    <p class="text-left"> ID: ${post.idPost}</p>
-                                    <p class="text-left"> User: ${post.user.login}</p>
-                                    <p class="text-left"> text: ${post.text}</p>
-                                    <div class="d-inline">
-                                        <p> likes: ${post.likeList}</p>
-                                        <p>comments: ${post.commentList}</p>
-                                    </div>
+            <c:if test="${!result}">
 
-                                    <c:set var="date" value="<%=new java.util.Date()%>"/>
-                                    <p> date: <fmt:formatDate type="both" value="${date}"/></p>
+                <div class="form-floating my-3 px-3">
+                    <c:forEach var="post" items="${allPosts}">
+                        <ul class="list-group list-group-flush" style="margin-top: 15px">
+                            <input class="list-group-item">
+                                <%--                                <c:set var="idPost" value="${post.idPost}"  scope="page" />--%>
+                            <input type="text" name="idPost" value=${post.idPost} hidden>
+                            <p class="text-left"> ID: ${post.idPost}</p>
+                            <p class="text-left"> User: ${post.user.login}</p>
+                            <p class="text-left"> text: ${post.text}</p>
+                            <div class="d-inline">
+                                <p> likes: ${post.likeList}</p>
+                                <p>comments: ${post.commentList}</p>
+                            </div>
 
-                                    <div style="margin-top: 15px">
+                            <c:set var="date" value="<%=new java.util.Date()%>"/>
+                            <p> date: <fmt:formatDate type="both" value="${date}"/></p>
+
+                                <%--                            <c:if test="${admin}">--%>
+                                <%--                                <form action="/post/editPost" method="get">--%>
+                                <%--                                    <input type="text" name="idPost" value=${post.idPost} hidden>--%>
+                                <%--                                    <button type="submit" name="buttonEdit" class="btn btn-outline-success mt-2 pr-3">--%>
+                                <%--                                        Edit post--%>
+                                <%--                                    </button>--%>
+                                <%--                                </form>--%>
+
+                                <%--                                <form action="/post/deletePost" method="post">--%>
+                                <%--                                    <input type="text" name="idPost" value=${post.idPost} hidden>--%>
+                                <%--                                    <button type="submit" name="buttonDelete" class="btn btn-outline-danger mt-2 pr-3">--%>
+                                <%--                                        Delete post--%>
+                                <%--                                    </button>--%>
+                                <%--                                </form>--%>
+                                <%--                            </c:if>--%>
+                            <c:choose>
+
+                                <c:when test="${notAdmin == post.user.login || admin == post.user.login}">
+                                    <form action="/post/editPost" method="get">
+                                        <input type="text" name="idPost" value=${post.idPost} hidden>
                                         <button type="submit" name="buttonEdit"
-                                                class="btn btn-outline-success mt-2 pr-3">
-                                            Edit
-                                            post
+                                                class="btn btn-outline-success mt-2 pr-3" >
+                                            Edit post
                                         </button>
+                                    </form>
+
+                                    <form action="/post/deletePost" method="post">
+                                        <input type="text" name="idPost" value=${post.idPost} hidden>
                                         <button type="submit" name="buttonDelete"
-                                                class="btn btn-outline-danger mt-2 pr-3">
+                                                class="btn btn-outline-danger mt-2 pr-3" >
                                             Delete post
                                         </button>
-                                    </div>
-                                </li>
-                            </ul>
-                        </c:forEach>
-                    </div>
-                </c:if>
-            </form>
+                                    </form>
+                                </c:when>
+                                <c:otherwise>
+                                    <form action="/post/editPost" method="get">
+                                        <input type="text" name="idPost" value=${post.idPost} hidden>
+                                        <button type="submit" name="buttonEdit"
+                                                class="btn btn-outline-success mt-2 pr-3 disabled">
+                                            Edit post
+                                        </button>
+                                    </form>
+
+                                    <form action="/post/deletePost" method="post">
+                                        <input type="text" name="idPost" value=${post.idPost} hidden>
+                                        <button type="submit" name="buttonDelete"
+                                                class="btn btn-outline-danger mt-2 pr-3 disabled">
+                                            Delete post
+                                        </button>
+                                    </form>
+                                </c:otherwise>
+                            </c:choose>
+
+                            </li>
+                        </ul>
+                    </c:forEach>
+                </div>
+            </c:if>
+            <%--            </form>--%>
         </div>
     </div>
+
+
+    <%--    <form action="/post/editPost" method="post">--%>
+    <%--        <input type="text" name="idPost" value="1" hidden >--%>
+    <%--        <input type="text" name="text" value="new text">--%>
+    <%--        <button type="submit"> save </button>--%>
+    <%--    </form>--%>
+
 </div>
 
 

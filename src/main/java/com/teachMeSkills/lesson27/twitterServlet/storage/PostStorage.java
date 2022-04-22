@@ -36,10 +36,12 @@ public class PostStorage {
         boolean isDeleted = false;
 
         for (Post post : postList) {
-            if (post.getIdPost() == idPost & post.getUser().getLogin().equals(login)) {
+//            if (post.getIdPost() == idPost & post.getUser().getLogin().equals(login)) {
+            if (post.getIdPost() == idPost) {
                 int arrayIndex = postList.indexOf(post);
                 postList.remove(arrayIndex);
                 isDeleted = true;
+                break;
             }
         }
         return isDeleted;
@@ -125,6 +127,16 @@ public class PostStorage {
             }
         }
         return isDeleted;
+    }
+
+    public Post getPostByID(int idPost){
+        Post lookingPost = new Post();
+        for (Post post : postList){
+            if (post.getIdPost() == idPost){
+                lookingPost = post;
+            }
+        }
+        return lookingPost;
     }
 
 

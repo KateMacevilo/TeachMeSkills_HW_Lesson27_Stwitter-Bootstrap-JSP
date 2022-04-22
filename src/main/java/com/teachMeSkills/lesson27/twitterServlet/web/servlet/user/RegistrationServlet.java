@@ -41,7 +41,7 @@ public class RegistrationServlet extends HttpServlet {
         user.setLogin(login);
         user.setPassword(password);
 
-        if (role.contains("admin")) {
+        if (userId == 1) {
             user.setRole(Role.ADMIN);
         } else {
             user.setRole(Role.USER);

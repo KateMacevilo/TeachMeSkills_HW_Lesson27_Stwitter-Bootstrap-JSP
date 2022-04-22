@@ -1,0 +1,14 @@
+
+\
+java:S2441&":Make "User" serializable or don't store it in the session.(ƒÖ‹¬şÿÿÿÿ8ş£²ª0
+}
+java:S1989+"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(˜ÑM8Ò¨º×ş/
+}
+java:S1989("aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(˜ÑM8ñ­¹×ş/
+}
+java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(˜ÑM8Äå›Óş/
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³«ä´úÿÿÿÿ8è®åü/
+o
+java:S1192"SDefine a constant instead of duplicating this literal "/authorization.jsp" 3 times.(˜ÑM8Ò¨º×ş/
+~
+java:S1989/"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ûĞ¦“8Íæ©ı/

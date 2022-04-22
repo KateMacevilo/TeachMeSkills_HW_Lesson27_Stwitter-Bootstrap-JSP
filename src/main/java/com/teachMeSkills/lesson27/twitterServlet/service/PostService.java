@@ -64,4 +64,8 @@ public class PostService {
         return postStorage.deleteComment(idPost, comment, userLogin);
     }
 
+    public Post getPostByID(int idPost){
+        return postStorage.getPostByID(idPost);
+    }
+
 }

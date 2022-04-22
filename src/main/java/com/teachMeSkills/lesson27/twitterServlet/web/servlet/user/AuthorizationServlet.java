@@ -1,5 +1,6 @@
 package com.teachMeSkills.lesson27.twitterServlet.web.servlet.user;
 
+import com.teachMeSkills.lesson27.twitterServlet.entity.Role;
 import com.teachMeSkills.lesson27.twitterServlet.entity.User;
 import com.teachMeSkills.lesson27.twitterServlet.service.UserService;
 import org.apache.logging.log4j.LogManager;
@@ -36,6 +37,13 @@ public class AuthorizationServlet extends HttpServlet {
             if (result) {
                 logger.info("Success authorization {}", login);
                 req.getSession().setAttribute("user", user);
+
+                if (user.getRole().equals(Role.ADMIN)){
+                    req.getSession().setAttribute("admin", user.getLogin());
+                } else {
+                    req.getSession().setAttribute("notAdmin", user.getLogin());
+                }
+
                 req.setAttribute("isAdded", result);
                 getServletContext().getRequestDispatcher("/authorization.jsp").forward(req, resp);
             } else {
