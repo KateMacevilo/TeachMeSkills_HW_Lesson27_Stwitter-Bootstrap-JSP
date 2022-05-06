@@ -1,4 +1,4 @@
 
-X
-java:S1854D"=Remove this useless assignment to local variable "userList1".(şûÿÿÿÿÿÿ
+ƒ
+java:S1488D"aImmediately return this expression instead of assigning it to the temporary variable "userList1".(«ß›Âüÿÿÿÿ8Ï’ á†0
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬îø„

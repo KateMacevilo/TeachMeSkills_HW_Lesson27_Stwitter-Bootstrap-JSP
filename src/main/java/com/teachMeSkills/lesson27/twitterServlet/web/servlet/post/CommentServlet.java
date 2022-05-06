@@ -47,8 +47,7 @@ public class CommentServlet extends HttpServlet {
         User user = (User) req.getSession().getAttribute("user");
         boolean isDeleted = false;
 
-        Comment comment = new Comment();
-        comment = commentService.getCommentById(idComment);
+        Comment comment = commentService.getCommentById(idComment);
 
         if (user.getRole().equals(Role.ADMIN)) {
             String loginUser = commentService.getLoginById(idComment);

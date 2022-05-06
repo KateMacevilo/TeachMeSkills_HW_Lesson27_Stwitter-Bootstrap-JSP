@@ -26,15 +26,15 @@ public class PostServlet extends HttpServlet {
         int idPost = postService.getPostId();
         String text = req.getParameter("text");
         User user = (User) req.getSession().getAttribute("user");
-        logger.info("Add the post {} {} {}", idPost, text, user.getLogin());
+        logger.debug("Add the post {} {} {}", idPost, text, user.getLogin());
         Post post = new Post(idPost, text, user, new ArrayList<Comment>(), new ArrayList<Like>());
         boolean isAdded = postService.addPost(post);
 
         if (isAdded) {
-            logger.info("Added the post {} {} {}", idPost, text, user.getLogin());
+            logger.debug("Added the post {} {} {}", idPost, text, user.getLogin());
             getServletContext().getRequestDispatcher("/myPostsPage.jsp").forward(req, resp);
         } else {
-            logger.info("Error during adding with the post {} {} {}", idPost, text, user.getLogin());
+            logger.debug("Error during adding with the post {} {} {}", idPost, text, user.getLogin());
             getServletContext().getRequestDispatcher("/notFound.jsp").forward(req, resp);
         }
     }
@@ -47,9 +47,9 @@ public class PostServlet extends HttpServlet {
         List<Post> allPosts;
         if (user.getRole() == Role.ADMIN) {
             allPosts = postService.getAllPosts();
-            logger.info("Get all posts as Admin, name - {}", user.getLogin());
+            logger.debug("Get all posts as Admin, name - {}", user.getLogin());
         } else {
-            logger.info("Get all posts as User, name - {}", user.getLogin());
+            logger.debug("Get all posts as User, name - {}", user.getLogin());
             allPosts = postService.getAllPostsByLogin(user.getLogin());
         }
 

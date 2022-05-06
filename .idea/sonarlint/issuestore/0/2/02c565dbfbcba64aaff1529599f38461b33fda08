@@ -1,26 +1,12 @@
 
-v
-java:S1989`"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(×ïÉ„8”Èåü/
-~
-java:S1989@"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ÿœşõ8Å¦ƒ©0
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¢Îòîùÿÿÿÿ8”Èåü/
-v
-java:S1989G"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(×ïÉ„8”Èåü/
-r
-java:S1989q"PHandle the following exception that could be thrown by "getWriter": IOException.(ıÇÉ™ıÿÿÿÿ8”Èåü/
-{
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(è‰ÔÊşÿÿÿÿ8ş£²ª0
-~
-java:S1989&"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ûĞ¦“8Œğı/
 ~
 java:S1989#"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ÿœşõ8’âé°ÿ/
-^
-java:S1854/"<Remove this useless assignment to local variable "allPosts".(¢¿ä¸şÿÿÿÿ8”Èåü/
-r
-java:S1989U"PHandle the following exception that could be thrown by "getWriter": IOException.(íí²ãùÿÿÿÿ8”Èåü/
-r
-java:S1989o"PHandle the following exception that could be thrown by "getWriter": IOException.(ïï‘·şÿÿÿÿ8”Èåü/
+~
+java:S1989&"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ûĞ¦“8Œğı/
 {
 java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(è‰ÔÊşÿÿÿÿ8ş£²ª0
-r
-java:S1989W"PHandle the following exception that could be thrown by "getWriter": IOException.(ıÇÉ™ıÿÿÿÿ8”Èåü/
+~
+java:S1989?"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ÿœşõ8Å¦ƒ©0
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(è‰ÔÊşÿÿÿÿ8ş£²ª0

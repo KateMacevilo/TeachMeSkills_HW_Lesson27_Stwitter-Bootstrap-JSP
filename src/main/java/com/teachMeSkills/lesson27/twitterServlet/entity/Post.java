@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Post {
 
-    private int idPost;
+    private int id;
     private String text;
     private User user;
     private List<Comment> commentList;
@@ -14,19 +14,19 @@ public class Post {
     }
 
     public Post(int post_id, String text, User user, List<Comment> commentList, List<Like> likeList) {
-        this.idPost = post_id;
+        this.id = post_id;
         this.text = text;
         this.user = user;
         this.commentList = commentList;
         this.likeList = likeList;
     }
 
-    public int getIdPost() {
-        return idPost;
+    public int getId() {
+        return id;
     }
 
-    public void setIdPost(int idPost) {
-        this.idPost = idPost;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getText() {
@@ -68,7 +68,7 @@ public class Post {
     @Override
     public String toString() {
         return "Post:" + '\n' +
-                "idPost: " + idPost + '\n' +
+                "idPost: " + id + '\n' +
                 "user:" + user.getLogin() + '\n' +
                 "text: '" + text + '\n' +
                 "commentList=" + commentList + '\n' +

@@ -29,13 +29,13 @@ public class AuthorizationServlet extends HttpServlet {
 
         String login = req.getParameter("login");
         String password = req.getParameter("password");
-        logger.info("Start authorization {}", login);
+        logger.debug("Start authorization {}", login);
         User user = userService.findByLogin(login);
 
         if (user.getLogin() != null) {
             boolean result = user.getPassword().equals(password);
             if (result) {
-                logger.info("Success authorization {}", login);
+                logger.debug("Success authorization {}", login);
                 req.getSession().setAttribute("user", user);
 
                 if (user.getRole().equals(Role.ADMIN)){
@@ -47,8 +47,8 @@ public class AuthorizationServlet extends HttpServlet {
                 req.setAttribute("isAdded", result);
                 getServletContext().getRequestDispatcher("/authorization.jsp").forward(req, resp);
             } else {
-                logger.info("Error authorization {}", login);
-                getServletContext().getRequestDispatcher("/authorization.jsp").forward(req, resp);
+                logger.debug("Error authorization {}", login);
+                getServletContext().getRequestDispatcher("/myPostsPage.jsp").forward(req, resp);
                 resp.setStatus(401);
             }
         } else {

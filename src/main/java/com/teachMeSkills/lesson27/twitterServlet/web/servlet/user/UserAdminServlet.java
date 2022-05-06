@@ -67,13 +67,12 @@ public class UserAdminServlet extends HttpServlet {
             resp.setStatus(403);
         } else {
 
-            if (idUser != null & idUser.matches("\\d+")) {
+            if (idUser != null && idUser.matches("\\d+")) {
                 int idUserInt = Integer.parseInt(idUser);
-                User userInfo = new User();
-                userInfo = userService.getUserByID(idUserInt);
+                User userInfo = userService.getUserByID(idUserInt);
                 resp.getWriter().println(userInfo.toString());
             } else {
-                List<User> userList = new ArrayList<User>();
+                List<User> userList;
                 userList = userService.getAllUsers();
 
                 if (!userList.isEmpty()) {

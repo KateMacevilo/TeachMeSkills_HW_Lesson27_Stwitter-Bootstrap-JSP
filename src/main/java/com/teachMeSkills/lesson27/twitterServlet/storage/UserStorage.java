@@ -42,7 +42,7 @@ public class UserStorage {
         boolean isEdited = false;
 
         for (User user : userList) {
-            if (user.getIdUser() == userId) {
+            if (user.getId() == userId) {
                 user.setRole(Role.ADMIN);
                 isEdited = true;
             }
@@ -55,7 +55,7 @@ public class UserStorage {
         boolean isDeleted = false;
 
         for (User user : userList) {
-            if (user.getIdUser() == userId) {
+            if (user.getId() == userId) {
                 userList.remove(user);
                 isDeleted = true;
             }
@@ -65,15 +65,14 @@ public class UserStorage {
     }
 
     public List<User> getAllUsers() {
-        List<User> userList1 = new ArrayList<>();
-        userList1 = userList;
+        List<User> userList1 = userList;
         return userList1;
     }
 
     public User getUserById(int idUser){
 
         for (User user : userList){
-            if (user.getIdUser() == idUser){
+            if (user.getId() == idUser){
                 return user;
             }
         }

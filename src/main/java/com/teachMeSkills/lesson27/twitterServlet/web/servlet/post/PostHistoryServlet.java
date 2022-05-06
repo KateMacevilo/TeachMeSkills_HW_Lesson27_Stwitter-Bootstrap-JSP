@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(urlPatterns = "/postHistory", name = "PostHistoryServlet")
@@ -20,8 +19,7 @@ public class PostHistoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        List<Post> allPostsHistory = new ArrayList<>();
-        allPostsHistory = postService.getAllPosts();
+        List<Post> allPostsHistory = postService.getAllPosts();
 
         if (!allPostsHistory.isEmpty()) {
             req.setAttribute("noPosts", false);

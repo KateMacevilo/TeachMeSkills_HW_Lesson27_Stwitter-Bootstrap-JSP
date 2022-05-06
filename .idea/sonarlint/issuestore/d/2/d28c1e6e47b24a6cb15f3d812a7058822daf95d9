@@ -1,8 +1,8 @@
 
 ~
-java:S19899"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Ğœ¶8¶õüÕş/
-~
 java:S1989"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Ğœ¶8š—Óş/
-p
-java:S19896"SHandle the following exception that could be thrown by "sendRedirect": IOException.(£ıËÌ8Ò€ô€0
+~
+java:S19898"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(Ğœ¶8¶õüÕş/
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(³«ä´úÿÿÿÿ8õ™¢åü/
+p
+java:S19895"SHandle the following exception that could be thrown by "sendRedirect": IOException.(£ıËÌ8Ò€ô€0

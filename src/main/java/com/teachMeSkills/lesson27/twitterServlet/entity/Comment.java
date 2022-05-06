@@ -2,12 +2,12 @@ package com.teachMeSkills.lesson27.twitterServlet.entity;
 
 public class Comment {
 
-    private int comment_id;
+    private int id;
     private String text;
     private String userLogin;
 
-    public Comment(int comment_id, String text, String userLogin) {
-        this.comment_id = comment_id;
+    public Comment(int id, String text, String userLogin) {
+        this.id = id;
         this.text = text;
         this.userLogin = userLogin;
     }
@@ -15,12 +15,12 @@ public class Comment {
     public Comment() {
     }
 
-    public int getComment_id() {
-        return comment_id;
+    public int getId() {
+        return id;
     }
 
-    public void setComment_id(int comment_id) {
-        this.comment_id = comment_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getText() {
@@ -42,7 +42,7 @@ public class Comment {
     @Override
     public String toString() {
         return "Comment: " + '\n' +
-                "comment_id=" + comment_id + '\n' +
+                "comment_id=" + id + '\n' +
                 "text='" + text + '\n' +
                 "userLogin=" + userLogin + '\n';
     }

@@ -21,7 +21,7 @@ public class CommentStorage {
     public boolean deleteCommentById(int commentId, String userLogin){
         boolean isDeleted = false;
         for (Comment comment : commentList){
-            if (comment.getComment_id() == commentId & comment.getUser().equals(userLogin)){
+            if (comment.getId() == commentId & comment.getUser().equals(userLogin)){
                 commentList.remove(comment);
                 isDeleted = true;
             }
@@ -33,7 +33,7 @@ public class CommentStorage {
 
         Comment comment = new Comment();
         for (Comment comment2 : commentList){
-            if (comment.getComment_id() == commentId){
+            if (comment.getId() == commentId){
                 comment = comment2;
             }
         }
@@ -45,7 +45,7 @@ public class CommentStorage {
 
         String userLogin = "";
         for (Comment comment : commentList){
-            if (comment.getComment_id() == commentId){
+            if (comment.getId() == commentId){
                 userLogin = comment.getUser();
             }
         }
@@ -56,7 +56,7 @@ public class CommentStorage {
 
         boolean isEdited = false;
         for (Comment comment : commentList){
-            if (comment.getComment_id() == commentId & comment.getUser().equals(userLogin)){
+            if (comment.getId() == commentId & comment.getUser().equals(userLogin)){
                 comment.setText(text);
                 isEdited = true;
             }

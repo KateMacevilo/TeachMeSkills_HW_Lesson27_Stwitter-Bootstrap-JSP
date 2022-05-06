@@ -21,6 +21,5 @@ public class LogoutServlet extends HttpServlet {
         User user = (User) req.getSession().getAttribute("user");
         req.getSession().invalidate();
         logger.info("Logout {}", user.getLogin());
-        resp.getWriter().println("OK");
     }
 }

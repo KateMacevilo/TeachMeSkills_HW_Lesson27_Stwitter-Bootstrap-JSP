@@ -2,15 +2,15 @@ package com.teachMeSkills.lesson27.twitterServlet.entity;
 
 public class User {
 
-    private int idUser;
+    private int id;
     private String name;
     private String login;
     private String password;
     private Role role;
 
 
-    public User(int idUser, String name, String login, String password, Role role) {
-        this.idUser = idUser;
+    public User(int id, String name, String login, String password, Role role) {
+        this.id = id;
         this.name = name;
         this.login = login;
         this.password = password;
@@ -20,12 +20,12 @@ public class User {
     public User() {
     }
 
-    public int getIdUser() {
-        return idUser;
+    public int getId() {
+        return id;
     }
 
-    public void setIdUser(int idUser) {
-        this.idUser = idUser;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -63,7 +63,7 @@ public class User {
     @Override
     public String toString() {
         return "User:" + '\n' +
-                "idUser =" + idUser + '\n' +
+                "idUser =" + id + '\n' +
                 "name='" + name + '\n' +
                 "login='" + login + '\n' +
                 "password='" + password + '\n' +

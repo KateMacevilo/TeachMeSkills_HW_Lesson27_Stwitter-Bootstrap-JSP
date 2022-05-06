@@ -7,7 +7,6 @@ import com.teachMeSkills.lesson27.twitterServlet.service.PostService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,11 +29,11 @@ public class PostEditServlet extends HttpServlet {
         boolean isEdit = false;
 
         if (user.getRole().equals(Role.ADMIN)) {
-            logger.info("Edit  post as Admin, name - {}, idPost {}", user.getLogin(), idPost);
+            logger.debug("Edit  post as Admin, name - {}, idPost {}", user.getLogin(), idPost);
             String loginUser = postService.getLoginByIdPost(idPost);
             isEdit = postService.editPost(idPost, text, loginUser);
         } else {
-            logger.info("Edit  post as User, name - {}, idPost {}", user.getLogin(), idPost);
+            logger.debug("Edit  post as User, name - {}, idPost {}", user.getLogin(), idPost);
             isEdit = postService.editPost(idPost, text, user.getLogin());
         }
 

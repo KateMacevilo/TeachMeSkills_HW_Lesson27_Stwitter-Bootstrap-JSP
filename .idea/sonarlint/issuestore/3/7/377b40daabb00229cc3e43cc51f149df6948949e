@@ -1,8 +1,4 @@
 
+N
+java:S1172"",Remove this unused method parameter "login".(Êïïıûÿÿÿÿ8ï×Ú—…0
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬îø„
-|
-java:S2178'"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(òÈ¶Ğ
-|
-java:S21784"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(òÈ¶Ğ
-|
-java:S2178z"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(ĞÚ

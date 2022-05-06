@@ -27,10 +27,10 @@ public class PostDeleteServlet extends HttpServlet {
 
         if (user.getRole().equals(Role.ADMIN)) {
             String loginUser = postService.getLoginByIdPost(idPost);
-            logger.info("Delete  post as Admin, name - {}, idPost {}", user.getLogin(), idPost);
+            logger.debug("Delete  post as Admin, name - {}, idPost {}", user.getLogin(), idPost);
             isDeleted = postService.deletePost(idPost, loginUser);
         } else {
-            logger.info("Delete  post as User, name - {}, idPost {}", user.getLogin(), idPost);
+            logger.debug("Delete  post as User, name - {}, idPost {}", user.getLogin(), idPost);
             isDeleted = postService.deletePost(idPost, user.getLogin());
         }
 

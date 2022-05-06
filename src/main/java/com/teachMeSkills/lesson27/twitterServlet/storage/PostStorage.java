@@ -36,8 +36,7 @@ public class PostStorage {
         boolean isDeleted = false;
 
         for (Post post : postList) {
-//            if (post.getIdPost() == idPost & post.getUser().getLogin().equals(login)) {
-            if (post.getIdPost() == idPost) {
+            if (post.getId() == idPost) {
                 int arrayIndex = postList.indexOf(post);
                 postList.remove(arrayIndex);
                 isDeleted = true;
@@ -51,7 +50,7 @@ public class PostStorage {
         boolean isEdited = false;
 
         for (Post post : postList) {
-            if (post.getIdPost() == idPost & post.getUser().getLogin().equals(login)) {
+            if (post.getId() == idPost & post.getUser().getLogin().equals(login)) {
                 post.setText(text);
                 isEdited = true;
             }
@@ -67,7 +66,7 @@ public class PostStorage {
     public boolean addComment(int idPost, Comment comment) {
         boolean isAdded = false;
         for (Post post : postList) {
-            if (post.getIdPost() == idPost) {
+            if (post.getId() == idPost) {
                 post.getCommentList().add(comment);
                 isAdded = true;
             }
@@ -79,7 +78,7 @@ public class PostStorage {
 
         boolean isAdded = false;
         for (Post post : postList) {
-            if (post.getIdPost() == idPost) {
+            if (post.getId() == idPost) {
                 post.getLikeList().add(like);
                 isAdded = true;
             }
@@ -91,7 +90,7 @@ public class PostStorage {
         boolean isDeleted = false;
 
         for (Post post : postList) {
-            if (post.getIdPost() == idPost) {
+            if (post.getId() == idPost) {
                 List<Like> newLikeList = post.getLikeList();
 
                 for (Like like : newLikeList) {
@@ -110,7 +109,7 @@ public class PostStorage {
 
         String userLogin = "";
         for (Post post : postList) {
-            if (post.getIdPost() == idPost) {
+            if (post.getId() == idPost) {
                 userLogin = post.getUser().getLogin();
             }
         }
@@ -121,7 +120,7 @@ public class PostStorage {
     public boolean deleteComment(int idPost, Comment comment, String userLogin) {
         boolean isDeleted = false;
         for (Post post : postList) {
-            if (post.getIdPost() == idPost & post.getUser().getLogin().equals(userLogin)) {
+            if (post.getId() == idPost & post.getUser().getLogin().equals(userLogin)) {
                 post.getCommentList().remove(comment);
                 isDeleted = true;
             }
@@ -132,7 +131,7 @@ public class PostStorage {
     public Post getPostByID(int idPost){
         Post lookingPost = new Post();
         for (Post post : postList){
-            if (post.getIdPost() == idPost){
+            if (post.getId() == idPost){
                 lookingPost = post;
             }
         }

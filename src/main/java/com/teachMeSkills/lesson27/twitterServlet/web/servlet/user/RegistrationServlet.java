@@ -32,11 +32,10 @@ public class RegistrationServlet extends HttpServlet {
         String name = req.getParameter("name");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
-        String role = req.getParameter("radioRole");
 
-        logger.info("Start registration {}", login);
+        logger.debug("Start registration {}", login);
         User user = new User();
-        user.setIdUser(userId);
+        user.setId(userId);
         user.setName(name);
         user.setLogin(login);
         user.setPassword(password);
@@ -50,10 +49,10 @@ public class RegistrationServlet extends HttpServlet {
         boolean isAdded = userService.addUser(user);
         req.setAttribute("isAdded", isAdded);
         if (isAdded) {
-            logger.info("Success registration {}", login);
+            logger.debug("Success registration {}", login);
             resp.sendRedirect("/authorization.jsp");
         } else {
-            logger.info("Error registration {}", login);
+            logger.debug("Error registration {}", login);
             getServletContext().getRequestDispatcher("/registration.jsp").forward(req, resp);
             resp.setStatus(400);
         }
